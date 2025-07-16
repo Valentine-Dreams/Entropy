@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "entropy:item/flash_frozen_clump"
+  }
+}
