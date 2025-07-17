@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "entropy:block/flash_frozen_iron_block"
+    }
+  }
+}

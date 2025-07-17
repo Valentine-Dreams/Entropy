@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "entropy:block/flash_frozen_iron_block"
+  }
+}

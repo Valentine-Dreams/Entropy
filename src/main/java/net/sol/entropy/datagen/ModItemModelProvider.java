@@ -3,6 +3,7 @@ package net.sol.entropy.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -18,7 +19,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        simpleItem(ModItems.FROST);
+        simpleItem(ModItems.FROST_INGOT);
+        simpleItem(ModItems.FROST_CLUMP);
         handheldItem(ModItems.THE_ENTROPY);
     }
 
