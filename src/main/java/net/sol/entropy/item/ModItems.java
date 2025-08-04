@@ -22,7 +22,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().rarity(ModRarities.ENTROPIC)));
 
     public static final RegistryObject<Item> THE_ENTROPY = ITEMS.register("the_entropy",
-            () -> new EntropySwordItem(ModToolTiers.FROST, 10, -1.4F, new Item.Properties().rarity(ModRarities.ENTROPIC)));
+            () -> new EntropySwordItem(ModToolTiers.FROST, 10, -2.2F, new Item.Properties().rarity(ModRarities.ENTROPIC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
