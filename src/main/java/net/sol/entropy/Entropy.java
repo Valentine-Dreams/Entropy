@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sol.entropy.block.ModBlocks;
+import net.sol.entropy.effect.ModEffects;
 import net.sol.entropy.item.ModItems;
 import org.slf4j.Logger;
 
@@ -33,6 +34,8 @@ public class Entropy
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
