@@ -2,5 +2,6 @@
   "item.entropy.flash_frozen_ingot": "Flash Frozen Iron Ingot",
   "item.entropy.flash_frozen_clump": "Flash Frozen Iron Clump",
   "item.entropy.the_entropy": "The Entropy",
-  "block.entropy.flash_frozen_iron_block": "Flash Frozen Iron Block"
+  "block.entropy.flash_frozen_iron_block": "Flash Frozen Iron Block",
+  "effect.entropy.freeze": "Freezing"
 }

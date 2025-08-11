@@ -13,7 +13,7 @@ public class ModEffects {
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Entropy.MOD_ID);
 
     public static final RegistryObject<MobEffect> FREEZE = MOB_EFFECTS.register("freeze",
-            () -> new FreezeEffect(MobEffectCategory.HARMFUL, 1284124));
+            () -> new FreezeEffect(MobEffectCategory.HARMFUL, 8424644));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

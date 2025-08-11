@@ -13,12 +13,14 @@ public class FreezeEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        if(pLivingEntity.horizontalCollision) {
+        if (pLivingEntity.isAlive() && !pLivingEntity.isDeadOrDying()) {
+            if (pAmplifier > 2)
+                pLivingEntity.hurt(pLivingEntity.damageSources().fellOutOfWorld(), 999f);
             Vec3 initialVec = pLivingEntity.getDeltaMovement();
-            Vec3 climbVec = new Vec3(initialVec.x, 0.2D, initialVec.z);
-            pLivingEntity.setDeltaMovement(climbVec.x * 0.91D, climbVec.y * 0.98D, climbVec.z * 0.91D);
+            double amp = pAmplifier + 1;
+            double scale = Math.pow(amp, amp);
+            pLivingEntity.setDeltaMovement(1D / scale * initialVec.x, initialVec.y > 0D ? 1D / scale * initialVec.y : initialVec.y, 1D / scale * initialVec.z);
         }
-
         super.applyEffectTick(pLivingEntity, pAmplifier);
     }
 
