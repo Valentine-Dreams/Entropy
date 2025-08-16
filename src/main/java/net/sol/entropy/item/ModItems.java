@@ -10,6 +10,11 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sol.entropy.Entropy;
 import net.sol.entropy.item.custom.EntropySwordItem;
 import net.sol.entropy.util.ModRarities;
+import net.sol.entropy.util.helpers.EntropyTooltipHelper;
+
+import java.util.List;
+
+import static net.sol.entropy.util.helpers.EntropyTooltipHelper.ItemDescriptionComponents.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -21,8 +26,11 @@ public class ModItems {
     public static final RegistryObject<Item> FROST_INGOT = ITEMS.register("flash_frozen_ingot",
             () -> new Item(new Item.Properties().rarity(ModRarities.ENTROPIC)));
 
-    public static final RegistryObject<Item> THE_ENTROPY = ITEMS.register("the_entropy",
-            () -> new EntropySwordItem(ModToolTiers.FROST, 13, -2.2F, new Item.Properties().rarity(ModRarities.ENTROPIC)));
+    public static final RegistryObject<Item> THE_ENTROPY = ITEMS.register("the_entropy", () -> new EntropySwordItem(
+                    ModToolTiers.FROST,
+                    13,
+                    -2.2F,
+                    ModRarities.ENTROPIC));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

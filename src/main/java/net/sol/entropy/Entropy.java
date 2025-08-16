@@ -2,6 +2,7 @@ package net.sol.entropy;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.api.distmarker.Dist;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sol.entropy.block.ModBlocks;
+import net.sol.entropy.damagesource.DamageVar;
 import net.sol.entropy.effect.ModEffects;
 import net.sol.entropy.item.ModItems;
 import org.slf4j.Logger;
@@ -38,6 +40,8 @@ public class Entropy
         ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

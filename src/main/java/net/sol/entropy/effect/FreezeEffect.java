@@ -4,6 +4,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
+import net.sol.entropy.damagesource.DamageVar;
 
 
 public class FreezeEffect extends MobEffect {
@@ -15,7 +16,7 @@ public class FreezeEffect extends MobEffect {
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
         if (pLivingEntity.isAlive() && !pLivingEntity.isDeadOrDying()) {
             if (pAmplifier > 2)
-                pLivingEntity.hurt(pLivingEntity.damageSources().fellOutOfWorld(), 999f);
+                pLivingEntity.hurt(DamageVar.Freeze(pLivingEntity.level().registryAccess()), 999f);
             Vec3 initialVec = pLivingEntity.getDeltaMovement();
             double amp = pAmplifier + 1;
             double scale = Math.pow(amp, amp);

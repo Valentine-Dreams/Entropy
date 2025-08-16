@@ -2,6 +2,15 @@
   "item.entropy.flash_frozen_ingot": "Flash Frozen Iron Ingot",
   "item.entropy.flash_frozen_clump": "Flash Frozen Iron Clump",
   "item.entropy.the_entropy": "The Entropy",
+
+
   "block.entropy.flash_frozen_iron_block": "Flash Frozen Iron Block",
-  "effect.entropy.freeze": "Freezing"
+
+
+  "effect.entropy.freeze": "Freezing",
+
+  "death.attack.entropy.freeze": "%1$s's atoms stopped moving",
+  "death.attack.entropy.freeze.player": "%1$s's atoms stopped moving due to %2$s",
+
+  "entropy.description.type.on_right_click": "§6On Right Click"
 }
