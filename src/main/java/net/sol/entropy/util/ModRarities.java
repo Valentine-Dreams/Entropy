@@ -9,16 +9,19 @@ import java.util.Map;
 public final class ModRarities {
 
     public static final Rarity ENTROPIC = Rarity.create("entropic", ChatFormatting.DARK_AQUA);
+    public static final Rarity MISFORTUNATE = Rarity.create("misfortunate", ChatFormatting.DARK_PURPLE);
 
     public static final Map<Rarity, RarityData> RARITY_TO_GRADIENT = new HashMap<>();
 
     static {
         RARITY_TO_GRADIENT.put(ENTROPIC, RarityData.ENTROPIC);
+        RARITY_TO_GRADIENT.put(MISFORTUNATE, RarityData.MISFORTUNATE);
     }
 
 
     public enum RarityData {
-        ENTROPIC(new int[][]{{97, 100, 152}, {114, 129, 166}, {154, 188, 197}}, 0.35f, 2.0f, false); //
+        ENTROPIC(new int[][]{{97, 100, 152}, {114, 129, 166}, {154, 188, 197}}, 0.35f, 2.0f, false), //
+        MISFORTUNATE(new int[][]{{131, 42, 155}, {199, 87, 141}, {178, 83, 237}}, 0.35f, 2.0f, true); //
 
 
         public final int[][] colors;
